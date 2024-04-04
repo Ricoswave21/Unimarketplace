@@ -1,0 +1,272 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Grundläggande stil */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(243, 218, 184);
+  }
+  
+  header {
+    background-color: #e3b88e;
+    color: rgb(15, 14, 14);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  .header-left{
+    flex-grow: 1;
+    
+  }
+
+  .header-right{
+    display: flex;
+    align-items: center;
+  }
+  
+
+  .header-left h1 {
+    margin: 0;
+  }
+  
+  .header-right form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-right form input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #050505;
+    
+  }
+  
+  .header-right form button {
+    padding: 5px 10px;
+    background-color: #0c0c0c;
+    color: rgb(242, 238, 238);
+    border: none;
+    cursor: pointer;
+  }
+
+  .search{
+   list-style: none;
+   display: flex;
+   padding-left: 0px; 
+   margin-right: 0;
+   align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #111010;
+    text-decoration: none;
+  }
+  nav ul li.search{
+    margin-right: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  main {
+    padding: 20px;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .hero-content h2{
+   padding-bottom: 20px;
+  }
+  
+  .hero-content {
+    margin-bottom: 30px;
+  }
+  
+  .hero-content p {
+    margin-bottom: 20px;
+  }
+
+  .featured-products{
+    display: flex;
+  }
+  
+  .featured-products img {
+    width: 33.33%;
+    margin-right: 10px;
+    height: auto;
+  }
+  .featured-products img:last-child {
+    margin-right: 0;
+  }
+  
+  footer {
+    background-color: #e3b88e;
+    color: #030202;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Grundläggande stil */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(243, 218, 184);
+  }
+  header {
+    background-color: rgb(227, 184, 142);
+    color: rgb(15, 14, 14);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header h1 {
+    margin: 0;
+  }
+  nav ul {
+    list-style-type: none;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  nav ul li a {
+    color: #111010;
+    text-decoration: none;
+  }
+  main {
+    padding: 20px;
+  }
+  .product-page {
+    text-align: center;
+  }
+  .product-page h2 {
+    margin-bottom: 10px;
+  }
+  .product-page hr {
+    width: 30%;
+    margin: auto;
+    border: 1px solid #000;
+  }
+
+  .featuredd-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .product {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 30%;
+    margin-right: 20px;
+  }
+  .product img {
+    width: 60%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+  .product p {
+    margin-bottom: 5px;
+  }
+  .rating {
+    color: gold;
+    margin-bottom: 5px;
+  }
+
+  .product-page .search{
+    margin-bottom: 20px;
+  }
+
+  .about-page .rating{
+    color: #000;
+  }
+
+  .product-footer {
+    background-color: #e3b88e;
+    color: #030202;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .about-page {
+    padding: 20px;
+  }
+  
+  
+  .about-page h2 {
+    margin-bottom: 10px;
+  }
+  
+  
+  .about-page p {
+    margin-bottom: 20px;
+  }
+  
+    /* Footer CSS */
+.about-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e3b88e;
+    color: #030202;
+    text-align: center;
+    padding: 10px 0;
+ }
+   
+  .rating {
+    color: black; /* Ändrade färgen till svart */
+    margin-bottom: 5px;
+  }
+  
+  .search-bar {
+    list-style: none;
+    display: flex;
+    padding-left: 0px;
+    margin-right: 20px; /* Öka marginalen från höger för att placera den närmare "Home" */
+    align-items: center;
+  }
+  
+  
+  
+  
+
+  
+  
+  
+ 
+ 
+ 
+
+
+  
+  
+

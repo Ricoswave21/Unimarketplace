@@ -4,33 +4,281 @@
 
 {% block content %}
 <style>
-    .image-container {
-    width: 40vw; /* Justera bildens bredd här */
-    height: 40vw; /* Bilden blir kvadratisk */
-    position: relative;
-    margin-top: 3rem; /* Flyttar bilden nedåt från headern */
+    body {
+        font-family: Arial, sans-serif;
     }
 
-.image-container img {
-    width: 100%; /* Ta upp hela bredden av sin behållare */
-    height: 100%;
-    object-fit: cover; /* Behåll aspektratio */
+    header {
+        background-color: #2d3748;
+        color: white;
+        padding: 1rem 0;
     }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2rem; /* Ökade storleken på rubriken */
+    }
+
+    header nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 0.5rem;
+    }
+
+    header nav a:hover {
+        text-decoration: underline;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+
+    section h2 {
+        margin-bottom: 1.5rem;
+        
+    }
+
+    /* Gör sektionens rutor klickbara */
+    .section-item {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+    .section-item:hover {
+        transform: scale(1.05);
+    }
+
+    article {
+        background-color: #f7fafc;
+        padding: 3rem 0;
+    }
+
+    article h2 {
+        margin-bottom: 1rem;
+    }
+
+    article p {
+        margin-bottom: 2rem;
+    }
+
+    article .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .bg-white {
+        background-color: white;
+    }
+
+    .rounded-lg {
+        border-radius: 0.5rem;
+    }
+
+    .shadow {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .mt-6 {
+        margin-top: 1.5rem;
+    }
+
+    .mb-12 {
+        margin-bottom: 3rem;
+    }
+
+    .px-6 {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .py-12 {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .text-2xl {
+        font-size: 1.5rem;
+    }
+
+    .text-3xl {
+        font-size: 1.875rem;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    footer {
+        background-color: #2d3748;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 40vw; /* Justera bildens bredd här */
+        height: 40vw; /* Bilden blir kvadratisk */
+        position: relative;
+        margin-top: 3rem; /* Flyttar bilden nedåt från headern */
+    }
+
+    .image-container img {
+        width: 100%; /* Ta upp hela bredden av sin behållare */
+        height: 100%;
+        object-fit: cover; /* Behåll aspektratio */
+    }
+
+    .book-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1rem;
+    }
+
+    .book-item {
+        position: relative;
+    }
+
+    .book-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+    }
+
+    .book-item .book-details {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    .book-item .book-details p {
+        margin: 0.5rem 0;
+    }
+
+    .book-item .book-details .price {
+        font-weight: bold;
+    }
+
+    .book-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.pagination-btn {
+    background-color: #2d3748;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.pagination-btn:hover {
+    background-color: #4a5568;
+}
+
+.book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrera böckerna */
+    gap: 1rem; /* Mellanrum mellan böckerna */
+}
+
+.book-item {
+    position: relative;
+    flex-basis: calc(33.33% - 1rem); /* Bredden på varje bok */
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.book-item .book-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.book-item .book-details p {
+    margin: 0.5rem 0;
+}
+
+.book-item .book-details .price {
+    font-weight: bold;
+}
+
+.left-pagination,
+.right-pagination {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .left-pagination {
+        left: 0;
+    }
+
+    .right-pagination {
+        right: 0;
+    }
+
+    .större-bild {
+       width: 510px; /* Ange den önskade bredden här */
+       height: auto; /* Automatisk höjd för att bevara proportionerna */
+       margin: 20px; /* Anpassa marginalerna efter behov */
+       border-radius: 20px; /* Runda hörnen för en finare look */
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Skugga för att lyfta fram bilden */
+}
 </style>
+<nav style="background-color: #F8F8F8;">
     <div class="container mx-auto py-4">
-    <div class="flex-container items-center justify-between">
-        <div style="width: 299.02px; height: 89.59px;">
-            <h2 style="font-size: 28px; line-height: 36px; font-weight: bold; color: #333333; margin-bottom: 0;">
-                Discover our range of affordable textbooks<br>
-                <span style="font-weight: bold;">and save money while</span><br>
-                investing in your future.
-            </h2>
-        </div>
-        <div class="image-container" style="width: 40vw; height: 40vw;">
-            <img src="https://images.pexels.com/photos/3987020/pexels-photo-3987020.jpeg?cs=srgb&dl=pexels-shvetsa-3987020.jpg&fm=jpg&_gl=1*1tgu7ta*_ga*NDA5MzYzMTkxLjE3MTY2NDIwNjg.*_ga_8JE65Q40S6*MTcxNjY0MjA2OC4xLjEuMTcxNjY0MjM0Ny4wLjAuMA.." alt="Books Image" style="width: 100%; height: 100%; object-fit: cover;">
+        <div class="flex-container items-center justify-between">
+            <div style="width: 299.02px; height: 89.59px;">
+                <h2 style="font-size: 28px; line-height: 36px; font-weight: bold; color: #333333; margin-bottom: 0;">
+                    Discover our range of affordable textbooks<br>
+                    <span style="font-weight: bold;">and save money while</span><br>
+                    investing in your future.
+                </h2>
+            </div>
+            <div class="image-container" style="width: 40vw; height: 40vw;">
+                <img src="https://images.pexels.com/photos/3987020/pexels-photo-3987020.jpeg?cs=srgb&dl=pexels-shvetsa-3987020.jpg&fm=jpg&_gl=1*1tgu7ta*_ga*NDA5MzYzMTkxLjE3MTY2NDIwNjg.*_ga_8JE65Q40S6*MTcxNjY0MjA2OC4xLjEuMTcxNjY0MjM0Ny4wLjAuMA.." alt="Books Image" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
         </div>
     </div>
-    </div>
+</nav>
     <div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
         <h2 class="mb-12 text-2xl text-center">Newest items</h2>
 

@@ -12,4 +12,9 @@ om inte  python3 manage.py runserver testa skrib python istället för python3.
 Hemsidan finns sedan på http://127.0.0.1:8000/.
 
 
+(pip3 install django
+pip3 install pillow
+pip3 install django-extensions)
+
+
 

@@ -4,7 +4,7 @@ from .forms import SignupForm
 from django.contrib.auth import logout
 # Create your views here.
 def index(request):
-    items = Items.objects.filter(is_sold=False)[0:6]
+    items = Items.objects.filter(is_sold=False)[0:20]
     categories = Category.objects.all()
     return render(request, 'core/index.html',{
         'categories': categories,

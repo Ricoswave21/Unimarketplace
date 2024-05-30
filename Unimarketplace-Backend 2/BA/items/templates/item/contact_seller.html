@@ -6,10 +6,12 @@
 <div class='w-1/2 my-6 mx-auto p-6 bg-gray-100 rounded-xl'>
     <h1 class='mb-6 text-3xl'>Contact Seller {{ seller_name }}</h1>
 
-    <form method='post'>
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class='py-4 px-8 text-lg bg-teal-500 hover:bg-teal-800 rounded-xl text-white'>Send Email</button>
-    </form>
+    <h1>Contact {{ seller_name }}</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send</button>
+    <button type="submit" class='py-4 px-8 text-lg bg-teal-500 hover:bg-teal-800 rounded-xl text-white'>Send Email</button>
+</form>
 </div>
 {% endblock %}

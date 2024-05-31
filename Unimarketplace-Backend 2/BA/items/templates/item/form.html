@@ -7,7 +7,7 @@
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Save</button>
+    <button class="py-4 px-8 text-lg bg-teal-500 hover:bg-teal-800 rounded-xl text-white">Submit</button>
 </form>
 
     </div>
@@ -19,6 +19,6 @@
             {{ form.non_field_errors }}
         </div>
     {% endif %}
-    <button class="py-4 px-8 text-lg bg-teal-500 hover:bg-teal-800 rounded-xl text-white">Submit</button>
+    <button class="py-4 px-8 text-lg bg-teal-500 hover:bg-teal-800 rounded-xl text-white">.</button>
 </form>
 {% endblock %}

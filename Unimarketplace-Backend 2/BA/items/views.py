@@ -74,12 +74,12 @@ def contact_seller(request, pk):
             phone_number = form.cleaned_data.get('phone_number', '')
             address = form.cleaned_data.get('address', '')
             sender_email = request.user.email
-            subject = sender_email  # Set the subject to the email of the logged-in user
+            subject = sender_email  
             
-            # Include phone number and address in the message body
+            # 
             message += f"\n\nPhone Number: {phone_number}\nAddress: {address}"
             
-            # Send the email
+            # 
             send_mail(
                 subject,
                 message,
@@ -87,8 +87,8 @@ def contact_seller(request, pk):
                 [seller_email],
                 fail_silently=False,
             )
-            # Optionally, you can add a success message or redirect the user to another page
-            return redirect('items:detail', pk=item.id)  # Redirect to a success page
+            # 
+            return redirect('items:detail', pk=item.id)  # 
     else:
         form = EmailForm()
 

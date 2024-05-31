@@ -1,0 +1,58 @@
+* {
+    margin: 0; /* Ändrad från 10 utan enhet */
+    padding: 0; /* Ändrad från 25 utan enhet för att starta från en ren baseline */
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    align-items: center; 
+    padding: 20px; /* Justerad till ett giltigt positivt värde */
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+   
+}
+
+nav ul li {
+    display: inline-block;
+    margin-inline-start: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+p {
+    color: #555;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px
+}
+.col-2h1{
+    font-size: 100px;
+    line-height: 60px;
+    margin:25px 0; 
+}
+.btn{
+    display:inline-block; 
+    background: #eed2afc7;
+    color:#fff
+    padding8px 30px; 
+    margin: 30px 0; 
+    border-radius: 30px; 
+}
+.header{
+    background: radial-gradient(#fff,#ffd6d6);
+}

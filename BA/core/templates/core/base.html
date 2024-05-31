@@ -14,9 +14,11 @@
             <a href="/" class="text-xl font-semibold">unimarket</a>
         
             <div class="space-x-6">
-                <a href="#" class="text-lg font-semibold hover:text-gray-500">New item</a>
+                <a href="{% url 'items:new' %}" class="text-lg font-semibold hover:text-gray-500">Add book</a>
                 <a href="#" class="text-lg font-semibold hover:text-gray-500">Browse</a>
                 {%if request.user.is_authenticated%}
+                
+ 
                 <div style="display: inline-block;">
                     <form action="{% url 'core:logout' %}" method="post">
                         {% csrf_token %}
@@ -43,7 +45,7 @@
         <div class="w-2/3 pr-10">
             <h3 class="mb-5 font-semibold text-gray-400">About</h3>
 
-            <p class="text-lg text-gray-500">MAU ipsum bla bla bla. UNI market bla bla bla. TEST market bla bla bla.</p>
+            <p class="text-lg text-gray-500">Marketplace.</p>
         </div>
 
         <div class="w-1/3">
